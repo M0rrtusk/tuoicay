@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".CustomerActivity">
+
+    <TextView
+        android:text="🌱 DỮ LIỆU CẢM BIẾN (CHỈ XEM)"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvMoisture"
+        android:text="Độ ẩm đất: -- %"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvHumidity"
+        android:text="Độ ẩm không khí: -- %"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:text="Nhiệt độ: -- °C"
+        android:textSize="18sp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="⚙️ THÔNG TIN ĐIỀU KHIỂN"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvMode"
+        android:text="Chế độ: ĐANG TẢI..."
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvThreshold"
+        android:text="Ngưỡng tưới: -- %"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:text="Trạng thái bơm: --"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🚫 Bạn là Customer, không có quyền điều khiển. Vui lòng liên hệ Admin."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="#D32F2F"
+        android:padding="10dp"/>
+    <Button
+        android:id="@+id/btnLogout"
+        android:text="ĐĂNG XUẤT"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

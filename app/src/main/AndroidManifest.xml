@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tuoicayiot">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:label="Smart Watering">
+
+        <!-- 1. LoginActivity: Màn hình khởi động, có LAUNCHER -->
+        <activity android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 2. RegisterActivity: Màn hình Đăng ký, không có LAUNCHER -->
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".DeviceSetupActivity"/>
+        <!-- 3. MainActivity: Màn hình chính, không có LAUNCHER -->
+        <activity android:name=".UserActivity"/>
+        <activity android:name=".CustomerActivity"/>
+
+    </application>
+</manifest>
