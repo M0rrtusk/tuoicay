@@ -33,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
         db = FirebaseDatabase.getInstance().getReference("users");
 
         etEmail = findViewById(R.id.et_email_register);
-        etPassword = findViewById(R.id.et_password_register); 
+        etPassword = findViewById(R.id.et_password_register);
         btnRegister = findViewById(R.id.btn_register);
 
         btnRegister.setOnClickListener(v -> {

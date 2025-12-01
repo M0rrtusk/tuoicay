@@ -186,22 +186,18 @@ public class DeviceSetupActivity extends AppCompatActivity {
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
 
-                        // 2b. Khởi tạo các thông số điều khiển cho thiết bị (devices/<ChipID>)
                         DatabaseReference deviceConfigRef = firebaseDatabase
                                 .getReference("devices")
                                 .child(selectedChipId);
 
-                        // Ghi UID người sở hữu và Email để App dễ dàng tra cứu
                         deviceConfigRef.child("ownerUID").setValue(uid);
                         deviceConfigRef.child("ownerEmail").setValue(mAuth.getCurrentUser().getEmail()); // Thêm Email
                         deviceConfigRef.child("deviceName").setValue(deviceName);
 
-                        // Khởi tạo các giá trị mặc định cho App nếu cần
                         deviceConfigRef.child("controlMode").setValue(0);
                         deviceConfigRef.child("threshold").setValue(40);
                         deviceConfigRef.child("pump").setValue(1);
 
-                        // BƯỚC MỚI: LƯU DEVICE ID VÀO SHARED PREFERENCES
                         SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPref.edit();
                         editor.putString(KEY_DEVICE_ID, selectedChipId);
@@ -209,7 +205,6 @@ public class DeviceSetupActivity extends AppCompatActivity {
 
                         Toast.makeText(DeviceSetupActivity.this, "Cấu hình thành công. Đang chuyển trang...", Toast.LENGTH_LONG).show();
 
-                        // Chuyển sang màn hình điều khiển chính
                         Intent intent = new Intent(DeviceSetupActivity.this, MainActivity.class);
                         intent.putExtra("DEVICE_ID", selectedChipId);
                         intent.putExtra("USER_EMAIL", mAuth.getCurrentUser().getEmail());
