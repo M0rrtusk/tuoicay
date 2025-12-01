@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "25322709294",
+    "project_id": "smartwatering-7f76b",
+    "storage_bucket": "smartwatering-7f76b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25322709294:android:35ebe6f1ecc4a3de8b1abf",
+        "android_client_info": {
+          "package_name": "com.example.tuoicayiot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhP_367WOMDoKmbEBSEQ5bM7JRzZOpkjo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,102 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".DeviceSetupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THIẾT LẬP KẾT NỐI VÀ RÀNG BUỘC"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#3F51B5"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Bước 1: Quét Thiết bị -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Quét và Chọn Thiết Bị Cần Cấu Hình"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <Spinner
+            android:id="@+id/sp_esp_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btn_scan_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QUÉT THIẾT BỊ (TÌM SW-XXXX)"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Tên Thiết Bị -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Đặt Tên Thiết Bị (Cá nhân hóa)"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/et_device_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ví dụ: Chậu Hoa Lan Ban Công"
+            android:inputType="textCapWords"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- THÊM TRƯỜNG NHẬP SSID -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3a. SSID WiFi Nhà"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/et_home_wifi_ssid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên mạng WiFi (Ví dụ: Dang Hung)"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Mật Khẩu WiFi -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3b. Mật Khẩu WiFi Nhà"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/et_home_wifi_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập mật khẩu WiFi của bạn"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- NÚT NẰM Ở CUỐI CÙNG -->
+        <Button
+            android:id="@+id/btn_provision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOÀN TẤT CẤU HÌNH VÀ RÀNG BUỘC"
+            android:backgroundTint="#4CAF50"/>
+
+    </LinearLayout>
+</ScrollView>
